@@ -1,0 +1,15 @@
+<.header>
+  Profile <%= @profile.id %>
+  <:subtitle>This is a profile record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/profiles/#{@profile}/edit"}>
+      <.button>Edit profile</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Profile"><%= @profile.profile %></:item>
+</.list>
+
+<.back navigate={~p"/profiles"}>Back to profiles</.back>
